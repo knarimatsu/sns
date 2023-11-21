@@ -59,7 +59,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class ProfileModel(models.Model):
+class Profile(models.Model):
     nickname = models.CharField(max_length=255)
     user_pro = models.OneToOneField(
         settings.AUTH_USER_MODEL, related_name="user_pro", on_delete=models.CASCADE
